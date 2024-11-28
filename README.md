@@ -12,8 +12,8 @@
 | 1 | UART0 RX | RP2350 UART0 TX | - | Comunicación UART entre Picos |
 | 2 | - | RP2350 SWCLK | - | Linea de clock para debugger |
 | 3 | - | RP2350 SWD | - | Linea de datos para debugger |
-| 4 | I2C0 SDA | RP2350 I2C1 SDA | - | Línea de datos de I2C entre Picos |
-| 5 | I2C0 SCL | RP2350 I2C1 SCL | - | Línea de clock de I2C entre Picos |
+| 4 | I2C0 SDA | RP2350 I2C0 SDA | - | Línea de datos de I2C entre Picos |
+| 5 | I2C0 SCL | RP2350 I2C0 SCL | - | Línea de clock de I2C entre Picos |
 | 6 | GP6 | J2 | - | GPIO |
 | 7 | GP7 | J2 | - | GPIO |
 | 8 | GP8 | J2 | - | GPIO |
