@@ -1,14 +1,27 @@
-# rp2350-board
+# RP2350-Board
 
-## Hardware
+## Hardware Overview
 
+### Microcontroladores
+- **RP2350B**: MCU principal con USB nativo
+- **RP2040-Zero**: Utilizado exclusivamente para debug 
 
-#### RP2040-Zero
+### Alimentación y Comunicación
+- **USB-C Principal (Alimentación)**:
+  - Conectado directamente al RP2350B
+  - Proporciona 5V regulados internamente a 3.3V
 
-Consideraciones: 
+- **USB-C Secundario (Comunicación UART)**:
+  - Conectado a puente UART-USB (CH340E)
+  - Permite comunicación serial para depuración
+  - Compatible con 3.3V (nivel lógico del RP2350B)
 
-En esta primera iteracion, la alimentacion es exclusivamente a traves del USB-C que va directo al RP2350B (es decir el que no tiene conversor serial) 
+---
 
+## Esquemático y PCB
+- **Herramienta de diseño**:
+  - Diseño inicial en EasyEDA
+  - Migrado a KiCad v7.0 para mejor compatibilidad
 
+> :bulb: **Acceso a archivos originales**: Contactar a [@monti3](https://github.com/monti3)
 
-El esquematico fue dieseñado desde EasyEDA y fue importado a kicad para mejor compatibilidad. 
