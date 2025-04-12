@@ -21,7 +21,11 @@
 ## Esquemático y PCB
 - **Herramienta de diseño**:
   - Diseño inicial en EasyEDA
-  - Migrado a KiCad v7.0 para mejor compatibilidad
+ 
+## ¿Como importarlo a KiCad? 
+  - En el menu de KiCad, seleccionamos Archivo > Importar proyecto ajeno a KiCad > Proyecto EasyEda (JLCEDA) Pro
+  - **Importante: para importarlo correctamente, se debe usar KiCad 9, ya que en versiones anteriores hay bugs no fixeados**
 
+    
 > :bulb: **Acceso a archivos originales**: Contactar a [@monti3](https://github.com/monti3)
 
