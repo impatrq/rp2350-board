@@ -23,7 +23,11 @@
   - Diseño inicial en EasyEDA
  
 ## ¿Como importarlo a KiCad? 
-  - En el menu de KiCad, seleccionamos Archivo > Importar proyecto ajeno a KiCad > Proyecto EasyEda (JLCEDA) Pro
+  - En el menu de KiCad, seleccionamos Archivo > Importar proyecto ajeno a KiCad > Proyecto EasyEDA (JLCEDA) Pro
+   <p align="center">
+  <img src="images/image.png" alt="Descripción de la imagen" width="600"/>
+</p>
+
   - **Importante: para importarlo correctamente, se debe usar KiCad 9, ya que en versiones anteriores hay bugs no fixeados**
 
     
