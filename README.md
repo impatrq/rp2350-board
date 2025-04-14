@@ -32,5 +32,6 @@
 
 
 > :bulb: **Este proyecto esta basado mayormente en** [este archvo](https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf)
+
 > :accessibility:: **Acceso a archivos originales**: Contactar a [@monti3](https://github.com/monti3)
 
