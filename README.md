@@ -31,6 +31,6 @@
   - **Importante: para importarlo correctamente, se debe usar KiCad 9, ya que en versiones anteriores hay bugs no fixeados**
 
 
-> :bulb: **Este proyecto esta basado mayormente en** [este archvo](https://github.com/monti3)
+> :bulb: **Este proyecto esta basado mayormente en** [este archvo](https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf)
 > :bulb: **Acceso a archivos originales**: Contactar a [@monti3](https://github.com/monti3)
 
