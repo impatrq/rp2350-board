@@ -119,14 +119,5 @@ Placa de desarrollo educativa basada en el microcontrolador **RP2350B** con sens
 
 **Proyecto desarrollado por**: [@monti3](https://github.com/monti3)
 
-📧 **Para consultas técnicas o archivos originales**: Abrir issue en este repositorio
-
----
-
-> 💡 **Nota**: Este es un proyecto educativo diseñado para facilitar el aprendizaje de programación en microcontroladores RP2350.
->
-> ⚡ **Estado**: Hardware validado - Software en desarrollo
-
----
 
 _Última actualización: Junio 2025_
