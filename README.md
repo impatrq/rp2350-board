@@ -24,7 +24,6 @@ Placa de desarrollo educativa basada en el microcontrolador **RP2350B** con sens
 
 - **USB-C Principal**: Conectado directamente al RP2350B
 - **Regulación**: 5V USB → AMS1117 → 3.3V para toda la placa
-- **Distribución**: Fuentes 3.3V, 1.1V (interno) y 5V disponibles
 
 ### Sensores y Periféricos Integrados
 
