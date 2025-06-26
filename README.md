@@ -1,92 +1,123 @@
-# rp2350-board
+# RP2350-Board
 
-## Hardware
+Placa de desarrollo educativa basada en el microcontrolador **RP2350B** con sensores integrados, conectividad WiFi y amplia gama de periféricos para aprendizaje y prototipado.
 
-### Conexiones tentativas
+## 🚀 Características Principales
 
-#### RP2040-Zero
+- **Doble microcontrolador**: RP2350B principal + RP2040-Zero para debug
+- **Sensores integrados**: DHT11, DS18B20, BMP180, BH1750, CNY70
+- **Conectividad WiFi**: Módulo ESP-01 integrado
+- **Display OLED**: Pantalla 0.91" 128x32 I2C
+- **Periféricos**: LEDs, buzzer, pulsadores, potenciómetros
+- **Expansión**: Headers para GPIO, ADC e I2C
 
-| GPIO | Función | Conexión Principal | Conexión Secundaria | Descripción |
-| --- | --- | --- | --- | --- |
-| 0 | UART0 TX | RP2350 UART0 RX | - | Comunicación UART entre Picos |
-| 1 | UART0 RX | RP2350 UART0 TX | - | Comunicación UART entre Picos |
-| 2 | - | RP2350 SWCLK | - | Linea de clock para debugger |
-| 3 | - | RP2350 SWD | - | Linea de datos para debugger |
-| 4 | I2C0 SDA | RP2350 I2C0 SDA | - | Línea de datos de I2C entre Picos |
-| 5 | I2C0 SCL | RP2350 I2C0 SCL | - | Línea de clock de I2C entre Picos |
-| 6 | GP6 | J2 | - | GPIO |
-| 7 | GP7 | J2 | - | GPIO |
-| 8 | GP8 | J2 | - | GPIO |
-| 9 | GP9 | J2 | - | GPIO |
-| 10 | GP10 | J2 | - | GPIO |
-| 11 | GP11 | J2 | - | GPIO |
-| 12 | GP12 | J2 | - | GPIO |
-| 13 | GP13 | J2 | - | GPIO |
-| 14 | GP14 | J2 | - | GPIO |
-| 15 | GP15 | J2 | - | GPIO |
-| 26 | ADC0 | J2 | - | Canal 0 de ADC del RP2040 |
-| 27 | ADC1 | J2 | - | Canal 1 de ADC del RP2040 |
-| 28 | ADC2 | J2 | - | Canal 2 de ADC del RP2040 |
-| 29 | ADC3 | J2 | - | Canal 3 de ADC del RP2040 |
+---
 
-#### RP2350
+## 🔧 Hardware Overview
 
-| GPIO | Función | Conexión Principal | Conexión Secundaria | Descripción |
-| --- | --- | --- | --- | --- |
-| 0 | UART0 TX | RP2040 UART0 RX | - | Comunicación UART entre Picos |
-| 1 | UART0 RX | RP2040 UART0 TX | - | Comunicación UART entre Picos |
-| 2 | INPUT/OUTPUT | DS18B20 | - | Pin de datos de sensor DS18B20 |
-| 3 | INPUT/OUTPUT | DH11/DH22 | - | Pin de datos de sensor DH11/DH22 |
-| 4 | I2C0 SDA | RP2040 I2C0 SDA | - | Comunicación I2C entre Picos |
-| 5 | I2C0 SCL | RP2040 I2C0 SCL | - | Comunicación I2C entre Picos |
-| 6 | I2C1 SDA | SDA | J4 | Comunicación por I2C con dispositivos internos |
-| 7 | I2C1 SCL | SCL | J4 | Comunicación por I2C con dispositivos internos |
-| 8 | GP8 | UART1 TX | - | Comunicación por UART para ESP-01 |
-| 9 | GP9 | UART1 RX | - | Comunicación por UART para ESP-01 |
-| 10 | GP10 | LED1 | - | Salida para LED Verde |
-| 11 | GP11 | LED2 | - | Salida para LED Amarillo |
-| 12 | GP12 | LED3 | - | Salida para LED Rojo |
-| 13 | GP13 | LED RGB RED | - | Salida LED RGB Rojo |
-| 14 | GP14 | LED RGB GREEN | - | Salida LED RGB Verde |
-| 15 | GP15 | LED RGB BLUE | - | Salida LED RGB Azul |
-| 16 | OUTPUT | BUZZER | - | Salida transistorizada con buzzer |
-| 17 | INPUT | SW1 | - | Pulsador con pull-up |
-| 18 | INPUT | SW2 | - | Pulsador con pull-up |
-| 19 | INPUT | CNY170 | - | Sensor infrarrojo |
-| 20 | GP20 | J3 | - | GPIO |
-| 21 | GP21 | J3 | - | GPIO |
-| 22 | GP22 | J3 | - | GPIO |
-| 23 | GP23 | J3 | - | GPIO |
-| 24 | GP24 | J3 | - | GPIO |
-| 25 | GP25 | J3 | - | GPIO |
-| 26 | GP26 | J3 | - | GPIO |
-| 27 | GP27 | J3 | - | GPIO |
-| 28 | GP28 | J3 | - | GPIO |
-| 29 | GP29 | J3 | - | GPIO |
-| 30 | GP30 | J3 | - | GPIO |
-| 31 | GP31 | J3 | - | GPIO |
-| 32 | GP32 | J3 | - | GPIO |
-| 33 | GP33 | J3 | - | GPIO |
-| 34 | GP34 | J3 | - | GPIO |
-| 35 | GP35 | J3 | - | GPIO |
-| 36 | GP36 | J3 | - | GPIO |
-| 37 | GP37 | J3 | - | GPIO |
-| 38 | GP38 | J3 | - | GPIO |
-| 39 | GP39 | J3 | - | GPIO |
-| 40 | ADC0 | J4 | RV1 | Canal 0 de ADC del RP2350 |
-| 41 | ADC1 | J4 | RV2 | Canal 1 de ADC del RP2350 |
-| 42 | ADC2 | J4 | | Canal 2 de ADC del RP2350 |
-| 43 | ADC3 | J4 | | Canal 3 de ADC del RP2350 |
-| 44 | ADC4 | J4 | | Canal 4 de ADC del RP2350 |
-| 45 | ADC5 | J4 | | Canal 5 de ADC del RP2350 |
-| 46 | ADC6 | J4 | | Canal 6 de ADC del RP2350 |
-| 47 | ADC7 | J4 | | Canal 7 de ADC del RP2350 |
+### Microcontroladores
 
-#### Dispositivos de I2C
+- **RP2350B (U1)**: MCU principal con USB nativo y acceso completo a periféricos
+- **RP2040-Zero (U2)**: Utilizado exclusivamente para debug y comunicación auxiliar
 
-| Módulo | Bus de I2C | Descripción |
-| --- | --- | --- |
-| BH1750 | RP2350 I2C1 | Sensor de luz |
-| SSD1306 | RP2350 I2C1 | OLED 128x32 |
-| BMP180 | RP2350 I2C1 | Sensor de presión y temperatura |
-| HTU21D | RP2350 I2C1 | Sensor de humedad |
+### Alimentación
+
+- **USB-C Principal**: Conectado directamente al RP2350B
+- **Regulación**: 5V USB → AMS1117 → 3.3V para toda la placa
+
+### Sensores y Periféricos Integrados
+
+| Componente     | Interfaz       | Función                           |
+| -------------- | -------------- | --------------------------------- |
+| **DHT11**      | Digital (GP3)  | Temperatura y humedad             |
+| **DS18B20**    | 1-Wire (GP2)   | Temperatura alta precisión        |
+| **BMP180**     | I2C            | Presión atmosférica y temperatura |
+| **BH1750**     | I2C            | Sensor de luz ambiente            |
+| **CNY70**      | Digital (GP19) | Sensor óptico reflexivo           |
+| **ESP-01**     | UART (GP6/GP7) | Conectividad WiFi                 |
+| **OLED 0.91"** | I2C            | Display 128x32                    |
+
+---
+
+## 📋 Tabla de Conexiones
+
+### 🔌 RP2350B - Pines GPIO
+
+| Pin GPIO    | Función     | Conectado a          | Descripción               |
+| ----------- | ----------- | -------------------- | ------------------------- |
+| **GP2**     | Digital I/O | DS18B20, R19         | Sensor temperatura 1-Wire |
+| **GP3**     | Digital I/O | DHT11, R20           | Sensor temp/humedad       |
+| **GP4**     | I2C SDA     | OLED, BMP180, BH1750 | Bus I2C sensores          |
+| **GP5**     | I2C SCL     | OLED, BMP180, BH1750 | Bus I2C sensores          |
+| **GP6**     | UART TX     | ESP-01               | WiFi - Transmisión        |
+| **GP7**     | UART RX     | ESP-01               | WiFi - Recepción          |
+| **GP10**    | Digital Out | LED D1 (Rojo)        | Indicador LED             |
+| **GP11**    | Digital Out | LED D2 (Verde)       | Indicador LED             |
+| **GP12**    | Digital Out | LED D3 (Azul)        | Indicador LED             |
+| **GP13-15** | Digital Out | LED RGB D4           | LED RGB (R/G/B)           |
+| **GP16**    | Digital Out | Buzzer (via Q1)      | Salida sonora             |
+| **GP17**    | Digital In  | Pulsador SW2         | Entrada con pullup        |
+| **GP18**    | Digital In  | Pulsador SW1         | Entrada con pullup        |
+| **GP19**    | Digital In  | Sensor CNY70         | Sensor óptico             |
+| **GP20-39** | Digital I/O | Headers H1           | Expansión GPIO            |
+
+### 🔍 Pines Especiales y Debug
+
+| Pin              | Función | Conectado a | Descripción             |
+| ---------------- | ------- | ----------- | ----------------------- |
+| **SWCLK/SWDIO**  | Debug   | RP2040-Zero | Comunicación debug      |
+| **I2C0 SDA/SCL** | I2C     | RP2040-Zero | Comunicación entre MCUs |
+| **RUN**          | Reset   | Botón RUN   | Pin de reset            |
+| **UART TX/RX**   | UART    | Header H3   | UART debug externo      |
+
+### 📊 Pines Analógicos (ADC)
+
+| Pin ADC    | Conectado a             | Función           |
+| ---------- | ----------------------- | ----------------- |
+| **ADC0**   | Potenciómetro PR1, H2.8 | Entrada analógica |
+| **ADC1**   | Potenciómetro PR2, H2.7 | Entrada analógica |
+| **ADC2-7** | Headers H2.6-H2.1       | Expansión ADC     |
+
+### 🛠 RP2040-Zero - Pines Disponibles
+
+| Pin GPIO   | Conectado a    | Función            |
+| ---------- | -------------- | ------------------ |
+| **GP0-1**  | Headers H6.1-2 | GPIO expansión     |
+| **GP6-8**  | Headers H6.3-5 | GPIO expansión     |
+| **GP9-15** | Headers H5/H4  | GPIO/ADC expansión |
+
+---
+
+## 🛠 Herramientas de Desarrollo
+
+### Diseño de Hardware
+
+- **Software**: EasyEDA
+- **Importar a KiCad**:
+  ```
+  Archivo > Importar proyecto ajeno > EasyEDA (JLCEDA Pro)
+  ```
+- **⚠️ Importante**: Usar KiCad 9+ para evitar bugs de importación
+
+### Esquemático y PCB
+
+<p align="center">
+  <img src="images/image.png" alt="Importación desde EasyEDA" width="600"/>
+</p>
+
+---
+
+## 📚 Referencias y Documentación
+
+- 📖 **Basado en**: [Hardware Design with RP2350](https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf)
+- 🔗 **Datasheet RP2350**: [Raspberry Pi Documentation](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf)
+- 📋 **SDK Examples**: [pico-examples](https://github.com/raspberrypi/pico-examples)
+
+---
+
+## 🧑‍💻 Autor y Contacto
+
+**Proyecto desarrollado por**: [@monti3](https://github.com/monti3)
+
+
+_Última actualización: Junio 2025_
